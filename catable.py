@@ -49,7 +49,7 @@ def printHeader(outfile):
 		
 def printLine(outfile, escapedLine):
 	if(printToMemory):
-		toPrint = memVar + '=$' + memVar + '\ ' + escapedLine + '\n'
+		toPrint = memVar + '=$' + memVar + '\ ' + escapedLine + '\\;\n'
 		outfile.write(toPrint)
 	else:
 		outfile.write('\techo ' + escapedLine + ' >> ' + wrappedFileName + '\n')
